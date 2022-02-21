@@ -1,0 +1,19 @@
+---
+- hosts: test
+  become: yes
+
+  tasks:
+  - name: install epel-release
+    yum: name=epel-release update_cache=yes
+
+  - name: install htop
+    yum: name=htop update_cache=yes
+
+  - name: install docker
+    yum: name=docker update_cache=yes
+
+  - name: install docker-compose
+    yum: name=docker-compose update_cache=yes
+
+  - name: install node_exporter
+    yum: name=node_exporter update_cache=yes
